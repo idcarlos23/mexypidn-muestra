@@ -5,219 +5,198 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>MexY-PIDN · Red de Infectólogos Pediatras Jóvenes de México</title>
-<meta name="description" content="MexY-PIDN: red de infectólogos pediatras jóvenes de México. Eventos académicos, investigación y comunidad.">
+<meta name="description" content="MexY-PIDN: Mexican Young Pediatric Infectious Diseases Network. Educación médica continua, investigación multicéntrica y comunidad.">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#1B3070;--teal:#08778A;--sky:#1E9DE3;--cyan:#74E6F4;--ink:#16213E;--muted:#5A6785;--bg:#F5F9FB;--line:#DCE6EE}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:17px/1.6 'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:#fff}
-h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;line-height:1.2;margin:0}
-a{color:var(--teal)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-.muestra{background:var(--navy);color:#fff;text-align:center;font-size:13px;padding:6px 10px;letter-spacing:.3px}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
-.brand img{height:46px}.brand b{font:800 20px Montserrat,sans-serif;color:var(--teal)}
-nav a{margin-left:22px;text-decoration:none;color:var(--ink);font:600 14px Montserrat,sans-serif}
-nav a:hover{color:var(--teal)}
-nav .cta{background:var(--teal);color:#fff;padding:9px 16px;border-radius:30px}
-nav .cta:hover{background:var(--navy);color:#fff}
-#menu{display:none;background:none;border:0;font-size:26px;color:var(--navy)}
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0B2A5E 0%,var(--navy) 45%,var(--teal) 100%);color:#fff}
-.hero:before{content:"";position:absolute;right:-180px;top:-140px;width:620px;height:620px;border-radius:50%;border:70px solid rgba(116,230,244,.12)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:80px;padding-bottom:90px}
-.kicker{display:inline-block;font:700 12px Montserrat,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
-.hero h1{font-size:46px;font-weight:800}
-.hero h1 span{color:var(--cyan)}
-.hero p{font-size:19px;opacity:.92;max-width:560px;margin:20px 0 30px}
-.btn{display:inline-block;padding:13px 24px;border-radius:30px;font:700 15px Montserrat,sans-serif;text-decoration:none;margin:0 10px 10px 0}
-.btn.p{background:var(--cyan);color:var(--navy)}.btn.p:hover{background:#fff}
-.btn.s{border:2px solid rgba(255,255,255,.6);color:#fff}.btn.s:hover{background:rgba(255,255,255,.12)}
-.emb{background:#fff;border-radius:50%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:40px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
-.emb img{width:100%}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border-radius:14px;box-shadow:0 14px 40px rgba(27,48,112,.12);margin-top:-46px;position:relative;z-index:2}
-.stats div{padding:22px;text-align:center;border-right:1px solid var(--line)}.stats div:last-child{border:0}
-.stats b{display:block;font:800 30px Montserrat,sans-serif;color:var(--teal)}.stats span{font-size:14px;color:var(--muted)}
-section{padding:90px 0}
-.alt{background:var(--bg)}
-.sh{max-width:700px;margin-bottom:40px}
-.sh .kicker{color:var(--teal)}
-.sh h2{font-size:34px;color:var(--navy)}
-.sh p{color:var(--muted);margin:12px 0 0}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
-.card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
-.card p{margin:0;color:var(--muted);font-size:16px}
-.ico{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--sky),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;margin-bottom:16px}
-.ev{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:16px}
-.fecha{background:var(--navy);color:#fff;border-radius:12px;text-align:center;padding:14px 6px}
-.fecha b{display:block;font:800 32px Montserrat,sans-serif;line-height:1}.fecha span{font:600 13px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:1px}
-.fecha.tbd{background:var(--teal)}
-.ev h3{font-size:20px;color:var(--navy)}
-.ev .meta{color:var(--muted);font-size:15px;margin-top:4px}
-.tag{display:inline-block;font:700 11px Montserrat,sans-serif;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:#E3F7FA;color:var(--teal);margin-bottom:8px}
-.tag.past{background:#EEF1F6;color:var(--muted)}
-.ev .btn{margin:0;background:var(--teal);color:#fff}.ev .btn:hover{background:var(--navy)}
-.ev.pasado{opacity:.75}
-.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-.tools input{flex:1;min-width:240px;padding:12px 16px;border:1px solid var(--line);border-radius:30px;font:inherit}
-.chip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:9px 16px;font:600 13px Montserrat,sans-serif;color:var(--ink);cursor:pointer}
-.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
-.art{background:#fff;border:1px solid var(--line);border-left:5px solid var(--sky);border-radius:10px;padding:18px 22px;margin-bottom:12px}
-.art h3{font:700 17px Montserrat,sans-serif;color:var(--navy);margin-bottom:6px}
-.art .au{font-size:15px;color:var(--muted)}
-.art .rv{font-size:14px;margin-top:6px}.art .rv b{color:var(--teal)}
-.join{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-.join ul{padding-left:20px;color:var(--muted)}.join li{margin-bottom:8px}
-form.f{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 14px 40px rgba(27,48,112,.08)}
-.f .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.f label{display:block;font:600 13px Montserrat,sans-serif;color:var(--navy);margin:12px 0 6px}
-.f input,.f select,.f textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:16px;background:#FBFDFE}
-.f button{margin-top:20px;width:100%;padding:14px;border:0;border-radius:30px;background:var(--teal);color:#fff;font:700 16px Montserrat,sans-serif;cursor:pointer}
-.f button:hover{background:var(--navy)}
-.f .ok{display:none;margin-top:14px;padding:12px;border-radius:8px;background:#E3F7FA;color:var(--teal);font-weight:600}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.pp{text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 16px}
-.av{width:86px;height:86px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;display:flex;align-items:center;justify-content:center;font:800 26px Montserrat,sans-serif}
-.av.v{background:#E9EEF4;color:#9AA8BC}
-.pp h3{font-size:16px;color:var(--navy)}.pp p{margin:4px 0 0;font-size:14px;color:var(--muted)}
-footer{background:#0E1D45;color:#C9D3E6;padding:56px 0 26px}
-footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
-footer h4{font:700 14px Montserrat,sans-serif;color:#fff;margin:0 0 12px;letter-spacing:1px;text-transform:uppercase}
-footer a{color:var(--cyan);text-decoration:none;display:block;margin-bottom:6px}
-footer .logo{background:#fff;border-radius:12px;padding:12px;display:inline-block}
-footer .logo img{height:90px}
-.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-size:13px;opacity:.7}
-@media(max-width:900px){
- nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:12px 22px 20px;border-bottom:1px solid var(--line)}
- nav.open{display:block}nav a{display:block;margin:12px 0}
- #menu{display:block}
- .hero .wrap,.join{grid-template-columns:1fr}.emb{max-width:280px;margin:0 auto}
- .hero h1{font-size:34px}
- .stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}
- .grid3,.team{grid-template-columns:1fr 1fr}
- .ev{grid-template-columns:90px 1fr}.ev .btn{grid-column:1/-1;text-align:center}
- footer .wrap{grid-template-columns:1fr}
-}
-@media(max-width:560px){.grid3,.team,.f .row{grid-template-columns:1fr}}
-</style>
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-<div class="muestra">Muestra de diseño · los textos y datos son provisionales hasta la aprobación de la red</div>
+<div class="muestra">Muestra de diseño · textos y datos provisionales hasta la aprobación de la red</div>
 
 <header><div class="wrap">
- <a class="brand" href="#inicio"><img src="img/emblema.png" alt=""><b>MexY-PIDN</b></a>
+ <a class="brand" href="#quienes"><img src="img/emblema.png" alt=""><b>MexY-PIDN</b></a>
  <button id="menu" aria-label="Menú" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
  <nav onclick="this.classList.remove('open')">
-  <a href="#nosotros">Nosotros</a><a href="#eventos">Eventos</a><a href="#investigacion">Investigación</a><a href="#equipo">Mesa directiva</a><a class="cta" href="#unete">Únete a la red</a>
+  <a href="#quienes">¿Quiénes somos?</a><a href="#historia">Historia</a><a href="#eventos">Eventos</a><a href="#publicaciones">Publicaciones científicas</a><a class="cta" href="#unete">Únete a la red</a>
  </nav>
 </div></header>
 
-<section class="hero" id="inicio" style="padding:0"><div class="wrap">
+<!-- ============ QUIENES SOMOS ============ -->
+<div class="pg" id="p-quienes">
+<section class="hero" style="padding:0"><div class="wrap">
  <div>
   <span class="kicker">Mexican Young Pediatric Infectious Diseases Network</span>
   <h1>Red de Infectólogos Pediatras <span>Jóvenes de México</span></h1>
-  <p>Somos una comunidad de infectólogos pediatras en formación y de reciente egreso que colabora en educación médica, investigación y atención de niñas, niños y adolescentes con enfermedades infecciosas en todo el país.</p>
-  <a class="btn p" href="#unete">Quiero ser miembro</a><a class="btn s" href="#eventos">Próximos eventos</a>
+  <p>Comprometidos con la excelencia, la innovación y la colaboración para mejorar la salud de los niños mexicanos.</p>
+  <a class="btn p" href="#eventos">Próximos eventos</a><a class="btn s" href="#unete">Quiero ser miembro</a>
  </div>
  <div class="emb"><img src="img/logo.png" alt="Logo MexY-PIDN"></div>
 </div></section>
 
 <div class="wrap"><div class="stats">
- <div><b>32</b><span>estados por alcanzar</span></div>
- <div><b>2</b><span>Summits nacionales</span></div>
- <div><b>Avales</b><span>Consejos de certificación</span></div>
- <div><b>100%</b><span>actividades gratuitas</span></div>
+ <div><b>+1,000</b><span>asistentes en el primer Highlights</span></div>
+ <div><b>6</b><span>países de Latinoamérica</span></div>
+ <div><b>7</b><span>comités de investigación</span></div>
+ <div><b>6</b><span>sedes formadoras en el consejo</span></div>
 </div></div>
 
-<section id="nosotros"><div class="wrap">
- <div class="sh"><span class="kicker">Quiénes somos</span><h2>Una red joven para la infectología pediátrica de México</h2>
- <p>MexY-PIDN reúne a residentes y especialistas jóvenes de hospitales de todo el país para compartir casos, generar evidencia propia y acercar la actualización científica a quienes atienden a la población pediátrica.</p></div>
- <div class="grid3">
-  <div class="card"><div class="ico">🎓</div><h3>Educación continua</h3><p>Summits, sesiones virtuales y talleres gratuitos con aval de los Consejos de Infectología y Pediatría.</p></div>
-  <div class="card"><div class="ico">🔬</div><h3>Investigación colaborativa</h3><p>Estudios multicéntricos entre hospitales de la red, como el análisis del brote de tos ferina 2024-2025.</p></div>
-  <div class="card"><div class="ico">🤝</div><h3>Comunidad y mentoría</h3><p>Un espacio para conectar residentes con especialistas, rotaciones, oportunidades y liderazgo académico.</p></div>
+<section><div class="wrap">
+ <div class="sh"><span class="kicker">¿Quiénes somos?</span><h2>Una red joven para la infectología pediátrica de México</h2>
+ <p>MexY-PIDN es una comunidad de infectólogos pediatras jóvenes, egresados en los últimos años de diferentes instituciones y universidades del país, que comparten la convicción de establecer alianzas y nuevas estrategias académicas y de investigación, trabajando en conjunto con otras asociaciones en beneficio de la salud de los niños mexicanos.</p></div>
+ <div class="mv">
+  <div class="card"><h3>Misión</h3><p>Ser parte del liderazgo en investigación, prevención y tratamiento de enfermedades infecciosas en niños en México, proporcionando educación médica de vanguardia en cada una de nuestras instituciones e impulsando la colaboración nacional e internacional.</p></div>
+  <div class="card"><h3>Visión</h3><p>Ser una red líder de infectólogos pediatras jóvenes en México y un referente en la generación de conocimiento, contribuyendo al desarrollo de nuevas terapias, vacunas y estrategias de prevención de las enfermedades infecciosas pediátricas.</p></div>
  </div>
 </div></section>
 
-<section class="alt" id="eventos"><div class="wrap">
- <div class="sh"><span class="kicker">Agenda académica</span><h2>Eventos</h2><p>Actividades virtuales y gratuitas, con constancia de participación.</p></div>
-
- <div class="ev">
-  <div class="fecha"><b>05</b><span>Dic 2026</span></div>
-  <div><span class="tag">Registro abierto</span><h3>II Summit MexY-PIDN: VIH Infantil y del Adolescente</h3>
-  <div class="meta">Sábado 5 de diciembre · 8:00 a 14:15 h (hora del centro) · Virtual por Zoom · Gratuito<br>Transmisión vertical y neonatos · Diagnóstico, tratamiento y salud a largo plazo · Prevención</div></div>
-  <a class="btn" href="https://registro.medevent.mx/ii-summit-mexy-pidn-vih/" target="_blank" rel="noopener">Registrarme</a>
- </div>
-
- <div class="ev">
-  <div class="fecha tbd"><b>Feb</b><span>2027</span></div>
-  <div><span class="tag">Próximamente</span><h3>Highlights de Infectología Pediátrica 2027</h3>
-  <div class="meta">Virtual · Lo más relevante del año en infectología pediátrica, presentado por miembros de la red.</div></div>
-  <a class="btn" href="#unete">Avísame</a>
- </div>
-
- <div class="ev pasado">
-  <div class="fecha" style="background:#8A97AE"><b>Feb</b><span>2025</span></div>
-  <div><span class="tag past">Realizado</span><h3>II Highlights en Infectología Pediátrica</h3>
-  <div class="meta">Las grabaciones de eventos pasados pueden consultarse en nuestro canal de YouTube.</div></div>
-  <a class="btn" href="https://www.youtube.com/@MexY_PIDN" target="_blank" rel="noopener">Ver en YouTube</a>
+<section class="alt"><div class="wrap">
+ <div class="sh"><span class="kicker">Valores</span><h2>Lo que nos guía</h2></div>
+ <div class="vals">
+  <div class="card"><h3>Excelencia</h3><p>Educación médica de la más alta calidad, respaldada por investigación y buenas prácticas clínicas.</p></div>
+  <div class="card"><h3>Innovación e investigación</h3><p>Estudios multicéntricos para el avance de la infectología pediátrica en México.</p></div>
+  <div class="card"><h3>Trabajo en equipo</h3><p>La mejor atención surge de la sinergia entre profesionales comprometidos.</p></div>
+  <div class="card"><h3>Ética</h3><p>Integridad y responsabilidad, priorizando siempre el bienestar de los niños.</p></div>
+  <div class="card"><h3>Impacto social</h3><p>Educación y concienciación sobre la prevención de infecciones en la infancia.</p></div>
+  <div class="card"><h3>Accesibilidad y equidad</h3><p>Conocimiento abierto para instituciones públicas y privadas de todo el país.</p></div>
+  <div class="card"><h3>Colaboración internacional</h3><p>Cooperación para prevenir y controlar amenazas infecciosas globales.</p></div>
+  <div class="card"><h3>Sin fines de lucro</h3><p>Actividades académicas gratuitas, con constancia y aval de los consejos.</p></div>
  </div>
 </div></section>
 
-<section id="investigacion"><div class="wrap">
- <div class="sh"><span class="kicker">Producción científica</span><h2>Investigación de nuestros miembros</h2><p>Artículos publicados por integrantes de la red. Cada miembro podrá enviar sus nuevas publicaciones para que aparezcan aquí.</p></div>
+<section><div class="wrap">
+ <div class="sh"><span class="kicker">Investigación clínica</span><h2>Comités académicos</h2><p>Cada comité diseña colaboraciones para estudios multicéntricos que se presentan en congresos nacionales e internacionales y se publican en revistas indexadas. La participación es libre y puede ser en varios comités.</p></div>
+ <div class="com">
+  <div>Infecciones congénitas y perinatales<small>STORCH, VIH, Chagas, Zika, tuberculosis</small></div>
+  <div>Epidemiología hospitalaria y PROA<small>Infecciones asociadas a la atención de la salud y optimización de antibióticos</small></div>
+  <div>VIH infantil<small>Del diagnóstico y tratamiento a la prevención</small></div>
+  <div>Micosis invasivas y parasitología<small>Enfermedades fúngicas y parasitarias pediátricas</small></div>
+  <div>Inmunocomprometidos<small>Pacientes hematooncológicos e inmunodeficiencias</small></div>
+  <div>Vacunología<small>Vacunas y su impacto en la población infantil</small></div>
+  <div>Enfermedades emergentes y reemergentes<small>Tos ferina, sarampión, rickettsiosis y más</small></div>
+ </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+ <div class="sh"><span class="kicker">Liderazgo</span><h2>Consejo Consultivo 2024-2025</h2><p>Infectólogos pediatras de las sedes con programa de especialización. El consejo se renueva cada dos años mediante votación.</p></div>
+ <div class="consejo" id="consejo"></div>
+ <div class="sh" style="margin:50px 0 20px"><span class="kicker">Vinculaciones</span><h2>Trabajamos con</h2></div>
+ <div class="allies"><span>Asociación Mexicana de Infectología Pediátrica (AMIP)</span><span>Asociación Mexicana de Vacunología (AMV)</span><span>Asociación Mexicana para el Estudio de las Infecciones Nosocomiales (AMEIN)</span><span>Sociedad Latinoamericana de Infectología Pediátrica (SLIPE)</span></div>
+</div></section>
+</div>
+
+<!-- ============ HISTORIA ============ -->
+<div class="pg" id="p-historia">
+<div class="phead"><div class="wrap"><span class="kicker">Historia</span><h1>Nuestra trayectoria</h1><p>De un grupo de egresados recientes a una red nacional de educación e investigación en infectología pediátrica.</p></div></div>
+<section><div class="wrap"><div class="tl">
+ <div class="tli"><div class="yr">Los inicios</div><h3>Nace MexY-PIDN</h3><p>Infectólogos pediatras jóvenes de distintas sedes formadoras del país se unen para crear alianzas académicas y de investigación en beneficio de la niñez mexicana.</p></div>
+ <div class="tli"><div class="yr">Primer curso</div><h3>I Highlights en Infectología Pediátrica</h3><p>Primer curso en línea de la red: más de mil asistentes, seguido en seis países de Latinoamérica, con aval de la Universidad Autónoma de Nuevo León y puntos del Consejo Mexicano de Certificación en Pediatría.</p></div>
+ <div class="tli"><div class="yr">Febrero 2024</div><h3>Misión, visión y comités de investigación</h3><p>Se presenta formalmente la red, se integra el Consejo Consultivo 2024-2025 y arrancan los primeros comités de estudios multicéntricos: VIH y sífilis congénita, epidemiología hospitalaria y resistencia bacteriana, y rickettsiosis.</p></div>
+ <div class="tli"><div class="yr">2024</div><h3>Alianzas con las asociaciones nacionales</h3><p>Vinculación con AMIP, la Asociación Mexicana de Vacunología (sesiones mensuales conjuntas) y AMEIN, además del respaldo académico de SLIPE.</p></div>
+ <div class="tli"><div class="yr">Febrero 2025</div><h3>II Highlights en Infectología Pediátrica</h3><p>Segunda edición del curso anual, en línea, con módulos coordinados por miembros de la red.</p></div>
+ <div class="tli"><div class="yr">Agosto 2025</div><h3>Vacunas estacionales en invierno</h3><p>Curso virtual sobre COVID-19, influenza, neumococo y virus sincitial respiratorio.</p></div>
+ <div class="tli"><div class="yr">2025-2026</div><h3>Primeros estudios multicéntricos publicados</h3><p>Entre ellos, el análisis del brote de tos ferina 2024-2025 en México y los factores asociados a la vacunación materno-infantil contra tos ferina.</p></div>
+ <div class="tli"><div class="yr">Diciembre 2026</div><h3>II Summit MexY-PIDN: VIH infantil y del adolescente</h3><p>Seis ponentes de México y Uruguay, con puntos del Consejo Mexicano de Certificación en Infectología.</p></div>
+ <div class="tli fut"><div class="yr">2027</div><h3>Lo que sigue</h3><p>Nueva edición de Highlights, nuevos estudios multicéntricos y crecimiento de la red en todo el país.</p></div>
+</div></div></section>
+</div>
+
+<!-- ============ EVENTOS ============ -->
+<div class="pg" id="p-eventos">
+<div class="phead"><div class="wrap"><span class="kicker">Agenda académica</span><h1>Eventos</h1><p>Cursos virtuales y gratuitos, con constancia de participación y aval de los consejos de certificación.</p></div></div>
+<section><div class="wrap">
+ <div class="evh">Evento actual</div>
+ <div class="feat">
+  <div><span class="tag">Registro abierto</span>
+   <h3>II Summit MexY-PIDN: VIH Infantil y del Adolescente</h3>
+   <div class="meta">Sábado 5 de diciembre de 2026 · 8:00 a 14:15 h (hora del centro) · Virtual por Zoom · Gratuito</div>
+   <ul><li>Bloque 1. Transmisión vertical y neonatos</li><li>Bloque 2. Diagnóstico, tratamiento y salud a largo plazo</li><li>Bloque 3. Prevención</li></ul>
+  </div>
+  <div><a class="btn" href="https://registro.medevent.mx/ii-summit-mexy-pidn-vih/" target="_blank" rel="noopener">Registrarme</a></div>
+ </div>
+ <div class="evh">Próximos eventos</div>
+ <div id="ev-fut"></div>
+ <div class="evh">Eventos pasados</div>
+ <div id="ev-pas"></div>
+</div></section>
+</div>
+
+<!-- ============ PUBLICACIONES ============ -->
+<div class="pg" id="p-publicaciones">
+<div class="phead"><div class="wrap"><span class="kicker">Producción científica</span><h1>Publicaciones científicas</h1><p>Artículos de los miembros de la red. Cada miembro puede enviar sus nuevas publicaciones para que aparezcan aquí.</p></div></div>
+<section><div class="wrap">
  <div class="tools">
   <input id="q" placeholder="Buscar por tema, autor o revista…" oninput="filtrar()">
-  <button class="chip on" data-t="">Todos</button><button class="chip" data-t="vacunas">Vacunas</button><button class="chip" data-t="its">ITS y VIH</button><button class="chip" data-t="hongos">Micología</button><button class="chip" data-t="proa">PROA</button><button class="chip" data-t="casos">Casos clínicos</button>
+  <button class="chip on" data-t="">Todas</button><button class="chip" data-t="vacunas">Vacunas</button><button class="chip" data-t="its">VIH e ITS</button><button class="chip" data-t="hongos">Micosis</button><button class="chip" data-t="proa">PROA</button><button class="chip" data-t="casos">Casos clínicos</button>
  </div>
  <div id="arts"></div>
 </div></section>
+</div>
 
-<section class="alt" id="equipo"><div class="wrap">
- <div class="sh"><span class="kicker">Organización</span><h2>Mesa directiva</h2><p>Integrantes de la red responsables de la coordinación académica.</p></div>
- <div class="team">
-  <div class="pp"><div class="av">IC</div><h3>Dr. José Iván Castillo Bejarano</h3><p>Presidente</p></div>
-  <div class="pp"><div class="av">CG</div><h3>Dr. Carlos A. Gómez Ponce</h3><p>Coordinación del Simposio de VIH</p></div>
-  <div class="pp"><div class="av v">?</div><h3>Por definir</h3><p>Secretaría</p></div>
-  <div class="pp"><div class="av v">?</div><h3>Por definir</h3><p>Tesorería</p></div>
- </div>
-</div></section>
-
-<section id="unete"><div class="wrap join">
+<!-- ============ UNETE ============ -->
+<div class="pg" id="p-unete">
+<div class="phead"><div class="wrap"><span class="kicker">Membresía</span><h1>Únete a MexY-PIDN</h1><p>La red busca una participación constante y activa de sus miembros.</p></div></div>
+<section><div class="wrap join">
  <div>
-  <div class="sh" style="margin-bottom:20px"><span class="kicker">Membresía</span><h2>Únete a MexY-PIDN</h2></div>
-  <p>Pueden formar parte residentes de infectología pediátrica y especialistas de reciente egreso en México. Al registrarte:</p>
+  <h3 style="color:var(--navy);margin-bottom:10px">Requisitos</h3>
   <ul>
-   <li>Recibes antes que nadie las invitaciones a eventos y sesiones.</li>
-   <li>Puedes participar como ponente, coordinador o en estudios multicéntricos.</li>
-   <li>Tus publicaciones aparecen en la sección de investigación.</li>
-   <li>Te integras al grupo de miembros de la red.</li>
+   <li>Ser infectólogo(a) pediatra de 45 años o menos, o con 5 años o menos de haber egresado de la especialidad.</li>
+   <li>Firmar el acuerdo de participación de la red.</li>
+   <li>Participar activamente en las iniciativas de la red a través de sus comités académicos.</li>
   </ul>
-  <p style="color:var(--muted);font-size:15px">La mesa directiva revisa cada solicitud y te contacta por correo.</p>
+  <h3 style="color:var(--navy);margin:24px 0 10px">Beneficios</h3>
+  <ul>
+   <li>Participar como ponente o coordinador en los cursos de la red.</li>
+   <li>Integrarte a estudios multicéntricos y publicar con la red.</li>
+   <li>Membresías preferentes con asociaciones aliadas.</li>
+   <li>Tus publicaciones en esta página.</li>
+  </ul>
  </div>
  <form class="f" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
   <div class="row"><div><label>Nombre completo</label><input required></div><div><label>Correo electrónico</label><input type="email" required></div></div>
-  <div class="row"><div><label>Estado</label><select required><option value="">Selecciona…</option><option>Aguascalientes</option><option>Baja California</option><option>Chihuahua</option><option>Ciudad de México</option><option>Jalisco</option><option>Nuevo León</option><option>Otro</option></select></div>
-  <div><label>Situación actual</label><select required><option value="">Selecciona…</option><option>Residente de infectología pediátrica</option><option>Infectólogo(a) pediatra</option><option>Residente de pediatría</option></select></div></div>
-  <div class="row"><div><label>Hospital o institución</label><input required></div><div><label>Año de egreso (o previsto)</label><input inputmode="numeric"></div></div>
-  <label>Intereses (opcional)</label><textarea rows="3" placeholder="VIH, vacunas, micología, PROA, investigación…"></textarea>
+  <div class="row"><div><label>Hospital o institución</label><input required></div><div><label>Sede donde hiciste la especialidad</label><input required></div></div>
+  <div class="row"><div><label>Año de egreso</label><input inputmode="numeric" required></div><div><label>Estado</label><input required></div></div>
+  <label>Comités de interés</label>
+  <select multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
   <button>Enviar solicitud</button>
-  <div class="ok">Muestra: en la versión final, tu solicitud llega a la mesa directiva y recibes un correo de confirmación.</div>
+  <div class="ok">Muestra: en la versión final la solicitud llega al Consejo Consultivo y recibes un correo de confirmación.</div>
  </form>
 </div></section>
+</div>
 
 <footer><div class="wrap">
- <div><span class="logo"><img src="img/logo.png" alt="MexY-PIDN"></span><p style="margin-top:14px">Red de Infectólogos Pediatras Jóvenes de México.<br>Mexican Young Pediatric Infectious Diseases Network.</p></div>
- <div><h4>Secciones</h4><a href="#nosotros">Nosotros</a><a href="#eventos">Eventos</a><a href="#investigacion">Investigación</a><a href="#unete">Únete a la red</a></div>
+ <div><span class="logo"><img src="img/logo.png" alt="MexY-PIDN"></span><p style="margin-top:14px">Red de Infectólogos Pediatras Jóvenes de México.<br>Red de educación médica continua e investigación sin fines de lucro.</p></div>
+ <div><h4>Secciones</h4><a href="#quienes">¿Quiénes somos?</a><a href="#historia">Historia</a><a href="#eventos">Eventos</a><a href="#publicaciones">Publicaciones científicas</a><a href="#unete">Únete a la red</a></div>
  <div><h4>Síguenos</h4><a href="https://www.youtube.com/@MexY_PIDN" target="_blank" rel="noopener">YouTube</a><a href="#" onclick="return false">Instagram</a><a href="#" onclick="return false">Correo de contacto</a></div>
- <div class="legal">© 2026 MexY-PIDN · Actividades académicas sin fines de lucro.</div>
+ <div class="legal">© 2026 MexY-PIDN · Mexican Young Pediatric Infectious Diseases Network</div>
 </div></footer>
 
 <script>
+/* ===== DATOS EDITABLES ===== */
+const CONSEJO=[
+ ["Dr. José Iván Castillo Bejarano","Hospital Universitario “Dr. José E. González”, Monterrey"],
+ ["Dra. Myriam Patricia Riojas Hernández","Hospital Universitario “Dr. José E. González”, Monterrey"],
+ ["Dra. Ada María Ruiz Villalva","Hospital Infantil de México “Federico Gómez”, CDMX"],
+ ["Dr. Fernando Ortega Riosvelasco","Hospital Infantil de México “Federico Gómez”, CDMX"],
+ ["Dra. Cyntia Ibanes Gutiérrez","Instituto Nacional de Pediatría, CDMX"],
+ ["Dra. Ana Jocelyn Carmona Vargas","Instituto Nacional de Pediatría, CDMX"],
+ ["Dra. Claudia Alix Hernández Castellanos","Hospital para el Niño de Toluca, Edo. Méx."],
+ ["Dr. Francisco Javier Avilez Fabián","Hospital para el Niño de Toluca, Edo. Méx."],
+ ["Dr. José Ecil Santos Hernández","Hospital Civil de Guadalajara / CMN Occidente"],
+ ["Dra. Mónica Abud González","Hospital Civil de Guadalajara / CMN Occidente"],
+ ["Dra. María Elena Martínez Bustamante","CMN 20 de Noviembre, CDMX"],
+ ["Dr. Miguel Ángel Minero Hibert","CMN 20 de Noviembre, CDMX"]
+];
+// [dia/mes, año, titulo, descripcion, liga, textoBoton]
+const FUTUROS=[
+ ["Feb","2027","Highlights en Infectología Pediátrica 2027","Virtual · Lo más relevante del año en infectología pediátrica. Fecha y programa por anunciar.","#unete","Avísame"]
+];
+const PASADOS=[
+ ["23","Ago 2025","Vacunas Estacionales en Invierno: Actualización Científica y Estrategias de Prevención","Virtual · COVID-19, influenza, neumococo y VSR. Coordinaron la Dra. María Citlalli Casillas Casillas y el Dr. José Iván Castillo Bejarano.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"],
+ ["Feb","2025","II Highlights en Infectología Pediátrica","Virtual · Segunda edición del curso anual de la red.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"],
+ ["1ª","edición","I Highlights en Infectología Pediátrica","En línea · Más de mil asistentes de seis países, con aval de la UANL y puntos del CMCP.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"]
+];
+// [titulo, autores, revista, año, doi, tema]
 const A=[
  ["Unraveling the Pertussis Outbreak in Mexico: Insights from a Multicenter 2024-2025 Study","Silva Dirzo M, Castillo Bejarano JI, Casillas Casillas MC, Guadarrama Rivera L, et al.","Pediatr Infect Dis J",2026,"10.1097/INF.0000000000004986","vacunas"],
  ["Brain abscess caused by Bifidobacterium spp. in a previously healthy adolescent: a case report","Castro-Pérez A, Minero-Hibert MA, Gómez-Ponce CA","Anaerobe",2026,"10.1016/j.anaerobe.2026.103090","casos"],
@@ -229,12 +208,23 @@ const A=[
  ["Beyond the puncture site: discordance between ventricular and lumbar CSF in paediatric tuberculous meningitis","Castillo-Bejarano JI, Arcos-Viscarra PS, Morales-López ML, Vaquera-Aparicio DN, et al.","Rev Esp Quimioter",2025,"10.37201/req/091.2025","casos"],
  ["Emerging infectious diseases and migration: a case of leishmaniasis in northern Mexico","Gómez-Ponce CA, Pérez-Barragán E, Méndez-Palacios DM, Ramírez-Romero KO, Pérez-Cavazos S","Lancet Infect Dis",2023,"10.1016/S1473-3099(23)00197-4","casos"]
 ];
+/* ===== FIN DATOS ===== */
+const ini=n=>n.replace(/^Dr[a]?\. /,'').split(' ').filter(w=>w.length>2).slice(0,2).map(w=>w[0]).join('');
+document.getElementById('consejo').innerHTML=CONSEJO.map(c=>`<div><div class="av">${ini(c[0])}</div><div><b>${c[0]}</b><span>${c[1]}</span></div></div>`).join('');
+const ev=(e,cls)=>`<div class="ev ${cls}"><div class="fecha" ${cls?'style="background:#8A97AE"':''}><b>${e[0]}</b><span>${e[1]}</span></div><div><span class="tag ${cls?'past':''}">${cls?'Realizado':'Próximamente'}</span><h3>${e[2]}</h3><div class="meta">${e[3]}</div></div><a class="btn" href="${e[4]}" ${e[4].startsWith('http')?'target="_blank" rel="noopener"':''}>${e[5]}</a></div>`;
+document.getElementById('ev-fut').innerHTML=FUTUROS.map(e=>ev(e,'')).join('');
+document.getElementById('ev-pas').innerHTML=PASADOS.map(e=>ev(e,'pasado')).join('');
 let T="";
 function filtrar(){const q=document.getElementById('q').value.toLowerCase();
- document.getElementById('arts').innerHTML=A.filter(a=>(!T||a[5]==T)&&(a.join(' ').toLowerCase().includes(q)))
+ document.getElementById('arts').innerHTML=A.filter(a=>(!T||a[5]==T)&&a.join(' ').toLowerCase().includes(q))
  .map(a=>`<div class="art"><h3>${a[0]}</h3><div class="au">${a[1]}</div><div class="rv"><b>${a[2]}</b> · ${a[3]} · <a href="https://doi.org/${a[4]}" target="_blank" rel="noopener">Ver artículo</a></div></div>`).join('')||'<p style="color:var(--muted)">Sin resultados.</p>';}
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');T=c.dataset.t;filtrar()});
 filtrar();
+function ruta(){const h=(location.hash||'#quienes').slice(1);const id=document.getElementById('p-'+h)?h:'quienes';
+ document.querySelectorAll('.pg').forEach(p=>p.classList.toggle('on',p.id=='p-'+id));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+id&&!a.classList.contains('cta')));
+ window.scrollTo(0,0);}
+addEventListener('hashchange',ruta);ruta();
 </script>
 </body>
 </html>
