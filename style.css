@@ -51,6 +51,7 @@ section{padding:90px 0}
 .tag.past{background:#EEF1F6;color:var(--muted)}
 .ev .btn{margin:0;background:var(--teal);color:#fff}.ev .btn:hover{background:var(--navy)}
 .ev.pasado{opacity:.75}
+.evbtns{display:flex;flex-direction:column;gap:8px}.ev .btn.b2{background:#fff;color:var(--teal);border:2px solid var(--teal)}.ev .btn.b2:hover{background:var(--teal);color:#fff}
 .tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
 .tools input{flex:1;min-width:240px;padding:12px 16px;border:1px solid var(--line);border-radius:30px;font:inherit}
 .chip{border:1px solid var(--line);background:#fff;border-radius:30px;padding:9px 16px;font:600 13px Montserrat,sans-serif;color:var(--ink);cursor:pointer}
@@ -88,7 +89,7 @@ footer .logo img{height:90px}
  .hero h1{font-size:34px}
  .stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}
  .grid3,.team{grid-template-columns:1fr 1fr}
- .ev{grid-template-columns:90px 1fr}.ev .btn{grid-column:1/-1;text-align:center}
+ .ev{grid-template-columns:90px 1fr}.ev .btn{text-align:center}.evbtns{grid-column:1/-1}
  footer .wrap{grid-template-columns:1fr}
 }
 @media(max-width:560px){.grid3,.team,.f .row{grid-template-columns:1fr}}
