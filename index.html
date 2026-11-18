@@ -80,8 +80,11 @@
 <section class="alt"><div class="wrap">
  <div class="sh"><span class="kicker">Liderazgo</span><h2>Consejo Consultivo 2024-2025</h2><p>Infectólogos pediatras de las sedes con programa de especialización. El consejo se renueva cada dos años mediante votación.</p></div>
  <div class="consejo" id="consejo"></div>
- <div class="sh" style="margin:50px 0 20px"><span class="kicker">Vinculaciones</span><h2>Trabajamos con</h2></div>
- <div class="allies"><span>Asociación Mexicana de Infectología Pediátrica (AMIP)</span><span>Asociación Mexicana de Vacunología (AMV)</span><span>Asociación Mexicana para el Estudio de las Infecciones Nosocomiales (AMEIN)</span><span>Sociedad Latinoamericana de Infectología Pediátrica (SLIPE)</span></div>
+ <div class="sh" style="margin:50px 0 20px"><span class="kicker">Vinculaciones</span><h2>Asociaciones con las que trabajamos</h2></div>
+ <h3 class="allyh">Nacionales</h3>
+ <div class="allies"><span>Asociación Mexicana de Infectología Pediátrica (AMIP)</span><span>Asociación Mexicana de Infectología y Microbiología Clínica (AMIMC)</span><span>Asociación Mexicana de Vacunología (AMV)</span><span>Asociación Mexicana para el Estudio de las Infecciones Nosocomiales (AMEIN)</span></div>
+ <h3 class="allyh">Internacionales</h3>
+ <div class="allies"><span>Sociedad Latinoamericana de Infectología Pediátrica (SLIPE)</span><span>World Society for Pediatric Infectious Diseases (WSPID)</span></div>
 </div></section>
 </div>
 
@@ -89,10 +92,10 @@
 <div class="pg" id="p-historia">
 <div class="phead"><div class="wrap"><span class="kicker">Historia</span><h1>Nuestra trayectoria</h1><p>De un grupo de egresados recientes a una red nacional de educación e investigación en infectología pediátrica.</p></div></div>
 <section><div class="wrap"><div class="tl">
- <div class="tli"><div class="yr">Los inicios</div><h3>Nace MexY-PIDN</h3><p>Infectólogos pediatras jóvenes de distintas sedes formadoras del país se unen para crear alianzas académicas y de investigación en beneficio de la niñez mexicana.</p></div>
+ <div class="tli"><div class="yr">13 de octubre de 2023</div><h3>Nace MexY-PIDN</h3><p>Infectólogos pediatras jóvenes de distintas sedes formadoras del país se unen para crear alianzas académicas y de investigación en beneficio de la niñez mexicana.</p></div>
  <div class="tli"><div class="yr">Primer curso</div><h3>I Highlights en Infectología Pediátrica</h3><p>Primer curso en línea de la red: más de mil asistentes, seguido en seis países de Latinoamérica, con aval de la Universidad Autónoma de Nuevo León y puntos del Consejo Mexicano de Certificación en Pediatría.</p></div>
  <div class="tli"><div class="yr">Febrero 2024</div><h3>Misión, visión y comités de investigación</h3><p>Se presenta formalmente la red, se integra el Consejo Consultivo 2024-2025 y arrancan los primeros comités de estudios multicéntricos: VIH y sífilis congénita, epidemiología hospitalaria y resistencia bacteriana, y rickettsiosis.</p></div>
- <div class="tli"><div class="yr">2024</div><h3>Alianzas con las asociaciones nacionales</h3><p>Vinculación con AMIP, la Asociación Mexicana de Vacunología (sesiones mensuales conjuntas) y AMEIN, además del respaldo académico de SLIPE.</p></div>
+ <div class="tli"><div class="yr">2024</div><h3>Alianzas nacionales e internacionales</h3><p>Vinculación con AMIP, AMIMC, la Asociación Mexicana de Vacunología (sesiones mensuales conjuntas) y AMEIN; en el ámbito internacional, con SLIPE y WSPID.</p></div>
  <div class="tli"><div class="yr">Febrero 2025</div><h3>II Highlights en Infectología Pediátrica</h3><p>Segunda edición del curso anual, en línea, con módulos coordinados por miembros de la red.</p></div>
  <div class="tli"><div class="yr">Agosto 2025</div><h3>Vacunas estacionales en invierno</h3><p>Curso virtual sobre COVID-19, influenza, neumococo y virus sincitial respiratorio.</p></div>
  <div class="tli"><div class="yr">2025-2026</div><h3>Primeros estudios multicéntricos publicados</h3><p>Entre ellos, el análisis del brote de tos ferina 2024-2025 en México y los factores asociados a la vacunación materno-infantil contra tos ferina.</p></div>
@@ -130,6 +133,18 @@
   <button class="chip on" data-t="">Todas</button><button class="chip" data-t="vacunas">Vacunas</button><button class="chip" data-t="its">VIH e ITS</button><button class="chip" data-t="hongos">Micosis</button><button class="chip" data-t="proa">PROA</button><button class="chip" data-t="casos">Casos clínicos</button>
  </div>
  <div id="arts"></div>
+
+ <div class="sh" style="margin:56px 0 18px"><span class="kicker">¿Publicaste algo?</span><h2>Sube tu artículo</h2><p>Si eres miembro de la red y publicaste un artículo, envíalo aquí. Lo revisa el comité y, una vez aprobado, aparece en esta lista.</p></div>
+ <form class="f" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
+  <div class="row"><div><label>Tu nombre</label><input required></div><div><label>Correo electrónico</label><input type="email" required></div></div>
+  <label>Título del artículo</label><input required>
+  <label>Autores</label><input placeholder="Ej. Pérez J, López M, et al." required>
+  <div class="row"><div><label>Revista</label><input required></div><div><label>Año</label><input inputmode="numeric" required></div></div>
+  <div class="row"><div><label>DOI o liga de PubMed</label><input placeholder="10.xxxx/xxxxx"></div><div><label>Tema</label><select><option>Vacunas</option><option>VIH e ITS</option><option>Micosis</option><option>PROA</option><option>Casos clínicos</option><option>Otro</option></select></div></div>
+  <label>Archivo PDF (opcional)</label><input type="file" accept=".pdf">
+  <button>Enviar artículo</button>
+  <div class="ok">Muestra: en la versión final el artículo llega al comité de la red para revisión antes de publicarse aquí.</div>
+ </form>
 </div></section>
 </div>
 
@@ -148,7 +163,6 @@
   <ul>
    <li>Participar como ponente o coordinador en los cursos de la red.</li>
    <li>Integrarte a estudios multicéntricos y publicar con la red.</li>
-   <li>Membresías preferentes con asociaciones aliadas.</li>
    <li>Tus publicaciones en esta página.</li>
   </ul>
  </div>
