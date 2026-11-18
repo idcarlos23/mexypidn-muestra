@@ -98,6 +98,7 @@
  <div class="tli"><div class="yr">2024</div><h3>Alianzas nacionales e internacionales</h3><p>Vinculación con AMIP, AMIMC, la Asociación Mexicana de Vacunología (sesiones mensuales conjuntas) y AMEIN; en el ámbito internacional, con SLIPE y WSPID.</p></div>
  <div class="tli"><div class="yr">Febrero 2025</div><h3>II Highlights en Infectología Pediátrica</h3><p>Segunda edición del curso anual, en línea, con módulos coordinados por miembros de la red.</p></div>
  <div class="tli"><div class="yr">Agosto 2025</div><h3>Vacunas estacionales en invierno</h3><p>Curso virtual sobre COVID-19, influenza, neumococo y virus sincitial respiratorio.</p></div>
+ <div class="tli"><div class="yr">Octubre 2025</div><h3>Webinar de virus sincitial respiratorio</h3><p>Dos días sobre vacunas, anticuerpos y estrategia global contra el VSR: 706 registrados y 271 asistentes únicos.</p></div>
  <div class="tli"><div class="yr">2025-2026</div><h3>Primeros estudios multicéntricos publicados</h3><p>Entre ellos, el análisis del brote de tos ferina 2024-2025 en México y los factores asociados a la vacunación materno-infantil contra tos ferina.</p></div>
  <div class="tli"><div class="yr">Diciembre 2026</div><h3>II Summit MexY-PIDN: VIH infantil y del adolescente</h3><p>Seis ponentes de México y Uruguay, con puntos del Consejo Mexicano de Certificación en Infectología.</p></div>
  <div class="tli fut"><div class="yr">2027</div><h3>Lo que sigue</h3><p>Nueva edición de Highlights, nuevos estudios multicéntricos y crecimiento de la red en todo el país.</p></div>
@@ -201,11 +202,12 @@ const CONSEJO=[
  ["Dra. María Elena Martínez Bustamante","CMN 20 de Noviembre, CDMX"],
  ["Dr. Miguel Ángel Minero Hibert","CMN 20 de Noviembre, CDMX"]
 ];
-// [dia/mes, año, titulo, descripcion, liga, textoBoton]
+// [dia/mes, año, titulo, descripcion, liga, textoBoton, (opcional) liga2, textoBoton2]
 const FUTUROS=[
  ["Feb","2027","Highlights en Infectología Pediátrica 2027","Virtual · Lo más relevante del año en infectología pediátrica. Fecha y programa por anunciar.","#unete","Avísame"]
 ];
 const PASADOS=[
+ ["28-29","Oct 2025","Virus sincitial respiratorio: nuevas soluciones para un viejo desafío. Vacunas, anticuerpos y estrategia global","Webinar · 706 registrados y 271 asistentes únicos en dos días, sobre todo infectólogos y pediatras de todo el país.","https://www.youtube.com/live/UUyrvkkeedc","Ver en YouTube","docs/reporte-webinar-vsr-oct2025.pdf","Reporte (PDF)"],
  ["23","Ago 2025","Vacunas Estacionales en Invierno: Actualización Científica y Estrategias de Prevención","Virtual · COVID-19, influenza, neumococo y VSR. Coordinaron la Dra. María Citlalli Casillas Casillas y el Dr. José Iván Castillo Bejarano.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"],
  ["Feb","2025","II Highlights en Infectología Pediátrica","Virtual · Segunda edición del curso anual de la red.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"],
  ["1ª","edición","I Highlights en Infectología Pediátrica","En línea · Más de mil asistentes de seis países, con aval de la UANL y puntos del CMCP.","https://www.youtube.com/@MexY_PIDN","Ver en YouTube"]
@@ -225,7 +227,7 @@ const A=[
 /* ===== FIN DATOS ===== */
 const ini=n=>n.replace(/^Dr[a]?\. /,'').split(' ').filter(w=>w.length>2).slice(0,2).map(w=>w[0]).join('');
 document.getElementById('consejo').innerHTML=CONSEJO.map(c=>`<div><div class="av">${ini(c[0])}</div><div><b>${c[0]}</b><span>${c[1]}</span></div></div>`).join('');
-const ev=(e,cls)=>`<div class="ev ${cls}"><div class="fecha" ${cls?'style="background:#8A97AE"':''}><b>${e[0]}</b><span>${e[1]}</span></div><div><span class="tag ${cls?'past':''}">${cls?'Realizado':'Próximamente'}</span><h3>${e[2]}</h3><div class="meta">${e[3]}</div></div><a class="btn" href="${e[4]}" ${e[4].startsWith('http')?'target="_blank" rel="noopener"':''}>${e[5]}</a></div>`;
+const ev=(e,cls)=>`<div class="ev ${cls}"><div class="fecha" ${cls?'style="background:#8A97AE"':''}><b>${e[0]}</b><span>${e[1]}</span></div><div><span class="tag ${cls?'past':''}">${cls?'Realizado':'Próximamente'}</span><h3>${e[2]}</h3><div class="meta">${e[3]}</div></div><div class="evbtns"><a class="btn" href="${e[4]}" ${e[4].startsWith('http')?'target="_blank" rel="noopener"':''}>${e[5]}</a>${e[6]?`<a class="btn b2" href="${e[6]}" target="_blank" rel="noopener">${e[7]}</a>`:''}</div></div>`;
 document.getElementById('ev-fut').innerHTML=FUTUROS.map(e=>ev(e,'')).join('');
 document.getElementById('ev-pas').innerHTML=PASADOS.map(e=>ev(e,'pasado')).join('');
 let T="";
