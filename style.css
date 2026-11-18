@@ -131,3 +131,5 @@ nav .cta{padding:9px 16px;box-shadow:none!important}
 .feat .btn{background:var(--cyan);color:var(--navy);margin:0}
 @media(max-width:900px){nav a{padding:0}.mv,.vals,.com,.consejo{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr}.phead h1{font-size:30px}}
 @media(max-width:560px){.mv,.vals,.com,.consejo{grid-template-columns:1fr}}
+
+.allyh{font:700 15px Montserrat,sans-serif;color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 10px}
