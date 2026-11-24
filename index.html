@@ -135,13 +135,12 @@
  <div id="arts"></div>
 
  <div class="sh" style="margin:56px 0 18px"><span class="kicker">¿Publicaste algo?</span><h2>Sube tu artículo</h2><p>Si eres miembro de la red y publicaste un artículo, envíalo aquí. Lo revisa el comité y, una vez aprobado, aparece en esta lista.</p></div>
- <form class="f" data-tipo="articulo" action="https://formsubmit.co/web@mexypidn.org" method="POST" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Enviando…'">
-  <input type="hidden" name="_next" value="https://mexypidn.org/#gracias-articulo">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nuevo articulo para revision">
-  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-  <div class="row"><div><label>Tu nombre</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
+ <form class="f" data-tipo="articulo" onsubmit="return enviar(event)">
+  <input type="hidden" name="access_key" value="ae0610d6-ee20-46fc-855e-0b5bf967a8a7">
+  <input type="hidden" name="subject" value="Pagina MexY-PIDN: nuevo articulo para revision">
+  <input type="hidden" name="from_name" value="Pagina MexY-PIDN">
+  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="row"><div><label>Tu nombre</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="email" type="email" required></div></div>
   <label>Título del artículo</label><input name="Titulo" required>
   <label>Autores</label><input name="Autores" placeholder="Ej. Pérez J, López M, et al." required>
   <div class="row"><div><label>Revista</label><input name="Revista" required></div><div><label>Año</label><input name="Anio" inputmode="numeric" required></div></div>
@@ -174,17 +173,16 @@
    <li>Tus publicaciones en esta página.</li>
   </ul>
  </div>
- <form class="f" data-tipo="membresia" action="https://formsubmit.co/web@mexypidn.org" method="POST" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Enviando…'">
-  <input type="hidden" name="_next" value="https://mexypidn.org/#gracias-unete">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nueva solicitud de membresia">
-  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-  <div class="row"><div><label>Nombre completo</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
+ <form class="f" data-tipo="membresia" onsubmit="return enviar(event)">
+  <input type="hidden" name="access_key" value="ae0610d6-ee20-46fc-855e-0b5bf967a8a7">
+  <input type="hidden" name="subject" value="Pagina MexY-PIDN: nueva solicitud de membresia">
+  <input type="hidden" name="from_name" value="Pagina MexY-PIDN">
+  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="row"><div><label>Nombre completo</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="email" type="email" required></div></div>
   <div class="row"><div><label>Hospital o institución</label><input name="Institucion" required></div><div><label>Sede donde hiciste la especialidad</label><input name="Sede" required></div></div>
   <div class="row"><div><label>Año de egreso</label><input name="Egreso" inputmode="numeric" required></div><div><label>Estado</label><input name="Estado" required></div></div>
   <label>Comités de interés</label>
-  <select name="Comites[]" multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
+  <select name="Comites" multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
   <button>Enviar solicitud</button>
   <div class="ok">¡Gracias! Tu solicitud llegó al Consejo Consultivo de la red. Te escribiremos al correo que dejaste.</div>
  </form>
@@ -254,15 +252,14 @@ function ruta(){const h=(location.hash||'#quienes').slice(1);const id=document.g
  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+id&&!a.classList.contains('cta')));
  window.scrollTo(0,0);}
 addEventListener('hashchange',ruta);ruta();
-/* ===== FORMULARIOS -> correo web@mexypidn.org (FormSubmit) ===== */
-const FS='https://formsubmit.co/ajax/web@mexypidn.org';
-async function enviar(e){e.preventDefault();const f=e.target,b=f.querySelector('button'),ok=f.querySelector('.ok');
- const d={};new FormData(f).forEach((v,k)=>{d[k]=d[k]?d[k]+', '+v:v});d._template='table';d._captcha='false';
- b.disabled=true;b.textContent='Enviando…';
- try{const r=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)});
-  if(!r.ok)throw 0;ok.textContent=ok.dataset.t||ok.textContent;ok.dataset.t=ok.textContent;ok.style.background='';ok.style.display='block';f.reset();}
- catch(_){ok.dataset.t=ok.dataset.t||ok.textContent;ok.textContent='No se pudo enviar. Intenta de nuevo o escribe a web@mexypidn.org';ok.style.display='block';}
- b.disabled=false;b.textContent=f.dataset.tipo=='articulo'?'Enviar artículo':'Enviar solicitud';return false;}
+/* ===== FORMULARIOS -> Web3Forms -> correo web@mexypidn.org (24 nov 2026) ===== */
+async function enviar(e){e.preventDefault();const f=e.target,b=f.querySelector('button'),ok=f.querySelector('.ok'),t0=b.textContent;
+ const d={};new FormData(f).forEach((v,k)=>{d[k]=d[k]?d[k]+', '+v:v});
+ if(!ok.dataset.t)ok.dataset.t=ok.textContent;b.disabled=true;b.textContent='Enviando…';
+ try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)});
+  const j=await r.json();if(!j.success)throw 0;ok.textContent=ok.dataset.t;ok.style.display='block';f.reset();}
+ catch(_){ok.textContent='No se pudo enviar. Intenta de nuevo o escribe a web@mexypidn.org';ok.style.display='block';}
+ b.disabled=false;b.textContent=t0;return false;}
 /* ===== ARTICULOS desde la hoja de la red (solo Aprobado) ===== */
 const HOJA='https://docs.google.com/spreadsheets/d/1MuDCT2ASMqUWet7PTQvoHfxVMKjCeTYYP-QOSoSBnfQ/gviz/tq?tqx=out:csv&sheet=Articulos&tq='+encodeURIComponent('select C,D,E,F,G,H where A = true');
 const TK={'vacunas':'vacunas','vih e its':'its','micosis':'hongos','proa':'proa','bacteriemias':'bacteriemias','casos clinicos':'casos','casos clínicos':'casos'};
