@@ -135,7 +135,10 @@
  <div id="arts"></div>
 
  <div class="sh" style="margin:56px 0 18px"><span class="kicker">¿Publicaste algo?</span><h2>Sube tu artículo</h2><p>Si eres miembro de la red y publicaste un artículo, envíalo aquí. Lo revisa el comité y, una vez aprobado, aparece en esta lista.</p></div>
- <form class="f" data-tipo="articulo" onsubmit="return enviar(event)">
+ <form class="f" data-tipo="articulo" action="https://formsubmit.co/web@mexypidn.org" method="POST" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Enviando…'">
+  <input type="hidden" name="_next" value="https://mexypidn.org/#gracias-articulo">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nuevo articulo para revision">
   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
   <div class="row"><div><label>Tu nombre</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
@@ -149,6 +152,10 @@
 </div></section>
 </div>
 
+
+<!-- ============ GRACIAS ============ -->
+<div class="pg" id="p-gracias-unete"><div class="phead"><div class="wrap"><span class="kicker">Membresía</span><h1>¡Gracias por tu solicitud!</h1><p>Llegó al Consejo Consultivo de la red. Te escribiremos al correo que dejaste.</p><p style="margin-top:18px"><a class="btn" href="#quienes">Volver al inicio</a></p></div></div></div>
+<div class="pg" id="p-gracias-articulo"><div class="phead"><div class="wrap"><span class="kicker">Publicaciones</span><h1>¡Gracias por enviar tu artículo!</h1><p>Lo revisará el comité de la red. Cuando sea aprobado aparecerá en Publicaciones científicas.</p><p style="margin-top:18px"><a class="btn" href="#publicaciones">Ver publicaciones</a></p></div></div></div>
 <!-- ============ UNETE ============ -->
 <div class="pg" id="p-unete">
 <div class="phead"><div class="wrap"><span class="kicker">Membresía</span><h1>Únete a MexY-PIDN</h1><p>La red busca una participación constante y activa de sus miembros.</p></div></div>
@@ -167,14 +174,17 @@
    <li>Tus publicaciones en esta página.</li>
   </ul>
  </div>
- <form class="f" data-tipo="membresia" onsubmit="return enviar(event)">
+ <form class="f" data-tipo="membresia" action="https://formsubmit.co/web@mexypidn.org" method="POST" onsubmit="this.querySelector('button').disabled=true;this.querySelector('button').textContent='Enviando…'">
+  <input type="hidden" name="_next" value="https://mexypidn.org/#gracias-unete">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nueva solicitud de membresia">
   <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
   <div class="row"><div><label>Nombre completo</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
   <div class="row"><div><label>Hospital o institución</label><input name="Institucion" required></div><div><label>Sede donde hiciste la especialidad</label><input name="Sede" required></div></div>
   <div class="row"><div><label>Año de egreso</label><input name="Egreso" inputmode="numeric" required></div><div><label>Estado</label><input name="Estado" required></div></div>
   <label>Comités de interés</label>
-  <select name="Comites" multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
+  <select name="Comites[]" multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
   <button>Enviar solicitud</button>
   <div class="ok">¡Gracias! Tu solicitud llegó al Consejo Consultivo de la red. Te escribiremos al correo que dejaste.</div>
  </form>
