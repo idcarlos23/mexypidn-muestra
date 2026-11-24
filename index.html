@@ -135,15 +135,16 @@
  <div id="arts"></div>
 
  <div class="sh" style="margin:56px 0 18px"><span class="kicker">¿Publicaste algo?</span><h2>Sube tu artículo</h2><p>Si eres miembro de la red y publicaste un artículo, envíalo aquí. Lo revisa el comité y, una vez aprobado, aparece en esta lista.</p></div>
- <form class="f" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
-  <div class="row"><div><label>Tu nombre</label><input required></div><div><label>Correo electrónico</label><input type="email" required></div></div>
-  <label>Título del artículo</label><input required>
-  <label>Autores</label><input placeholder="Ej. Pérez J, López M, et al." required>
-  <div class="row"><div><label>Revista</label><input required></div><div><label>Año</label><input inputmode="numeric" required></div></div>
-  <div class="row"><div><label>DOI o liga de PubMed</label><input placeholder="10.xxxx/xxxxx"></div><div><label>Tema</label><select><option>Vacunas</option><option>VIH e ITS</option><option>Micosis</option><option>PROA</option><option>Casos clínicos</option><option>Otro</option></select></div></div>
-  <label>Archivo PDF (opcional)</label><input type="file" accept=".pdf">
+ <form class="f" data-tipo="articulo" onsubmit="return enviar(event)">
+  <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nuevo articulo para revision">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="row"><div><label>Tu nombre</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
+  <label>Título del artículo</label><input name="Titulo" required>
+  <label>Autores</label><input name="Autores" placeholder="Ej. Pérez J, López M, et al." required>
+  <div class="row"><div><label>Revista</label><input name="Revista" required></div><div><label>Año</label><input name="Anio" inputmode="numeric" required></div></div>
+  <div class="row"><div><label>DOI o liga de PubMed</label><input name="DOI" placeholder="10.xxxx/xxxxx" required></div><div><label>Tema</label><select name="Tema"><option>Vacunas</option><option>VIH e ITS</option><option>Micosis</option><option>PROA</option><option>Bacteriemias</option><option>Casos clínicos</option><option>Otro</option></select></div></div>
   <button>Enviar artículo</button>
-  <div class="ok">Muestra: en la versión final el artículo llega al comité de la red para revisión antes de publicarse aquí.</div>
+  <div class="ok">¡Gracias! Tu artículo llegó al comité de la red. Cuando sea aprobado aparecerá en esta lista.</div>
  </form>
 </div></section>
 </div>
@@ -166,14 +167,16 @@
    <li>Tus publicaciones en esta página.</li>
   </ul>
  </div>
- <form class="f" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';this.reset()">
-  <div class="row"><div><label>Nombre completo</label><input required></div><div><label>Correo electrónico</label><input type="email" required></div></div>
-  <div class="row"><div><label>Hospital o institución</label><input required></div><div><label>Sede donde hiciste la especialidad</label><input required></div></div>
-  <div class="row"><div><label>Año de egreso</label><input inputmode="numeric" required></div><div><label>Estado</label><input required></div></div>
+ <form class="f" data-tipo="membresia" onsubmit="return enviar(event)">
+  <input type="hidden" name="_subject" value="Pagina MexY-PIDN: nueva solicitud de membresia">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <div class="row"><div><label>Nombre completo</label><input name="Nombre" required></div><div><label>Correo electrónico</label><input name="Correo" type="email" required></div></div>
+  <div class="row"><div><label>Hospital o institución</label><input name="Institucion" required></div><div><label>Sede donde hiciste la especialidad</label><input name="Sede" required></div></div>
+  <div class="row"><div><label>Año de egreso</label><input name="Egreso" inputmode="numeric" required></div><div><label>Estado</label><input name="Estado" required></div></div>
   <label>Comités de interés</label>
-  <select multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
+  <select name="Comites" multiple size="4" style="height:auto"><option>Infecciones congénitas y perinatales</option><option>Epidemiología hospitalaria y PROA</option><option>VIH infantil</option><option>Micosis invasivas y parasitología</option><option>Inmunocomprometidos</option><option>Vacunología</option><option>Enfermedades emergentes y reemergentes</option></select>
   <button>Enviar solicitud</button>
-  <div class="ok">Muestra: en la versión final la solicitud llega al Consejo Consultivo y recibes un correo de confirmación.</div>
+  <div class="ok">¡Gracias! Tu solicitud llegó al Consejo Consultivo de la red. Te escribiremos al correo que dejaste.</div>
  </form>
 </div></section>
 </div>
@@ -233,7 +236,7 @@ document.getElementById('ev-pas').innerHTML=PASADOS.map(e=>ev(e,'pasado')).join(
 let T="";
 function filtrar(){const q=document.getElementById('q').value.toLowerCase();
  document.getElementById('arts').innerHTML=A.filter(a=>(!T||a[5]==T)&&a.join(' ').toLowerCase().includes(q))
- .map(a=>`<div class="art"><h3>${a[0]}</h3><div class="au">${a[1]}</div><div class="rv"><b>${a[2]}</b> · ${a[3]} · <a href="https://doi.org/${a[4]}" target="_blank" rel="noopener">Ver artículo</a></div></div>`).join('')||'<p style="color:var(--muted)">Sin resultados.</p>';}
+ .map(a=>`<div class="art"><h3>${a[0]}</h3><div class="au">${a[1]}</div><div class="rv"><b>${a[2]}</b> · ${a[3]} · <a href="${/^https?:/.test(a[4])?a[4]:'https://doi.org/'+a[4]}" target="_blank" rel="noopener">Ver artículo</a></div></div>`).join('')||'<p style="color:var(--muted)">Sin resultados.</p>';}
 document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');T=c.dataset.t;filtrar()});
 filtrar();
 function ruta(){const h=(location.hash||'#quienes').slice(1);const id=document.getElementById('p-'+h)?h:'quienes';
@@ -241,6 +244,26 @@ function ruta(){const h=(location.hash||'#quienes').slice(1);const id=document.g
  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+id&&!a.classList.contains('cta')));
  window.scrollTo(0,0);}
 addEventListener('hashchange',ruta);ruta();
+/* ===== FORMULARIOS -> correo web@mexypidn.org (FormSubmit) ===== */
+const FS='https://formsubmit.co/ajax/web@mexypidn.org';
+async function enviar(e){e.preventDefault();const f=e.target,b=f.querySelector('button'),ok=f.querySelector('.ok');
+ const d={};new FormData(f).forEach((v,k)=>{d[k]=d[k]?d[k]+', '+v:v});d._template='table';d._captcha='false';
+ b.disabled=true;b.textContent='Enviando…';
+ try{const r=await fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)});
+  if(!r.ok)throw 0;ok.textContent=ok.dataset.t||ok.textContent;ok.dataset.t=ok.textContent;ok.style.background='';ok.style.display='block';f.reset();}
+ catch(_){ok.dataset.t=ok.dataset.t||ok.textContent;ok.textContent='No se pudo enviar. Intenta de nuevo o escribe a web@mexypidn.org';ok.style.display='block';}
+ b.disabled=false;b.textContent=f.dataset.tipo=='articulo'?'Enviar artículo':'Enviar solicitud';return false;}
+/* ===== ARTICULOS desde la hoja de la red (solo Aprobado) ===== */
+const HOJA='https://docs.google.com/spreadsheets/d/1MuDCT2ASMqUWet7PTQvoHfxVMKjCeTYYP-QOSoSBnfQ/gviz/tq?tqx=out:csv&sheet=Articulos&tq='+encodeURIComponent('select C,D,E,F,G,H where A = true');
+const TK={'vacunas':'vacunas','vih e its':'its','micosis':'hongos','proa':'proa','bacteriemias':'bacteriemias','casos clinicos':'casos','casos clínicos':'casos'};
+function csv(t){const R=[];let r=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];
+ if(q){if(ch=='"'&&t[i+1]=='"'){c+='"';i++}else if(ch=='"')q=false;else c+=ch}
+ else if(ch=='"')q=true;else if(ch==','){r.push(c);c=''}else if(ch=='\n'){r.push(c);R.push(r);r=[];c=''}else if(ch!='\r')c+=ch}
+ if(c||r.length){r.push(c);R.push(r)}return R;}
+fetch(HOJA).then(r=>r.text()).then(t=>{const R=csv(t).slice(1).filter(x=>x[0]);if(!R.length)return;
+ A.length=0;R.forEach(x=>A.push([x[0],x[1],x[2],+x[3]||x[3],x[4].replace(/^https?:\/\/(dx\.)?doi\.org\//,''),TK[(x[5]||'').toLowerCase()]||'otro']));
+ A.sort((a,b)=>(b[3]||0)-(a[3]||0));filtrar();}).catch(()=>{});
+
 </script>
 </body>
 </html>
